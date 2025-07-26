@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin Panel</title></head>
+<body>
+  <h2>Admin Dashboard</h2>
+  <a href="/logout">Logout</a>
+  <table border="1">
+    <tr><th>User</th><th>Check In</th><th>Check Out</th></tr>
+    {% for row in logs %}
+    <tr><td>{{ row[0] }}</td><td>{{ row[1] }}</td><td>{{ row[2] or 'Working' }}</td></tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
